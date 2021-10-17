@@ -15,6 +15,12 @@ class StringCalculatorShould {
     @Test
     void string_with_single_number_should_return_number_as_int() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1, stringCalculator.add("1"));
+        assertEquals(stringCalculator.add("1"), 1);
+    }
+
+    @Test
+    void two_numbers_deliter_and_return_sum() {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(stringCalculator.add("1,2"), 3);
     }
 }
